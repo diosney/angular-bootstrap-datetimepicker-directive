@@ -1,0 +1,259 @@
+<html ng-app="app">
+	<head>
+		<meta charset='utf-8' />
+		<title>datetimepicker Directive Examples</title>
+
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class='col-sm-12'>
+					<br />
+					<br />
+
+					<h3 style="text-align: center;">
+						Angular directive in action using the
+
+						<a href="http://eonasdan.github.io/bootstrap-datetimepicker">
+							official examples
+						</a>
+					</h3>
+					<br />
+
+					<form class="form form-horizontal" novalidate>
+						<div class="form-group">
+							<label for="dt1" class="col-sm-3 control-label">Minimum Setup</label>
+
+							<div class="col-sm-7">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+									<input type="text" id="dt1" class="form-control input-sm"
+
+									       datetimepicker
+
+									       placeholder="..."
+									       name="time">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dt2" class="col-sm-3 control-label">Using Locales</label>
+
+							<div class="col-sm-7">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+									<input type="text" id="dt2" class="form-control input-sm"
+
+									       datetimepicker
+									       datetimepicker-options="{locale:'ru'}"
+
+									       placeholder="..."
+									       name="time">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dt3" class="col-sm-3 control-label">Custom Formats</label>
+
+							<div class="col-sm-7">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+									<input type="text" id="dt3" class="form-control input-sm"
+
+									       datetimepicker
+									       datetimepicker-options="{format:'LT'}"
+
+									       placeholder="..."
+									       name="time">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dt4" class="col-sm-3 control-label">Enabled/Disabled Dates</label>
+
+							<div class="col-sm-7">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+									<input type="text" id="dt4" class="form-control input-sm"
+
+									       datetimepicker
+									       datetimepicker-options="{defaultDate:'11/1/2013',disabledDates:[moment('12/25/2013'),Date(2013, 11 - 1, 21),'11/22/2013 00:53']}"
+
+									       placeholder="..."
+									       name="time">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dt5" class="col-sm-3 control-label">Custom Icons</label>
+
+							<div class="col-sm-7">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+									<input type="text" id="dt5" class="form-control input-sm"
+
+									       datetimepicker
+									       datetimepicker-options="{icons:{next:'glyphicon glyphicon-arrow-right',previous:'glyphicon glyphicon-arrow-left',up:'glyphicon glyphicon-arrow-up',down:'glyphicon glyphicon-arrow-down'}}"
+
+									       placeholder="..."
+									       name="time">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dt6" class="col-sm-3 control-label">View Mode</label>
+
+							<div class="col-sm-7">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+									<input type="text" id="dt6" class="form-control input-sm"
+
+									       datetimepicker
+									       datetimepicker-options="{viewMode:'years'}"
+
+									       placeholder="..."
+									       name="time">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dt7" class="col-sm-3 control-label">Min View Mode</label>
+
+							<div class="col-sm-7">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+									<input type="text" id="dt7" class="form-control input-sm"
+
+									       datetimepicker
+									       datetimepicker-options="{viewMode:'years',format:'MM/YYYY'}"
+
+									       placeholder="..."
+									       name="time">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dt8" class="col-sm-3 control-label">Disabled Days of the Week</label>
+
+							<div class="col-sm-7">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+									<input type="text" id="dt8" class="form-control input-sm"
+
+									       datetimepicker
+									       datetimepicker-options="{daysOfWeekDisabled:[0,6]}"
+
+									       placeholder="..."
+									       name="time">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dt9" class="col-sm-3 control-label">Using a
+								<code>$scope</code>d variable</label>
+
+							<div class="col-sm-7">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+									<input type="text" id="dt9" class="form-control input-sm"
+
+									       datetimepicker
+									       datetimepicker-options="{{ scoped }}"
+
+									       placeholder="..."
+									       name="time">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dt8" class="col-sm-3 control-label">Inline</label>
+
+							<div class="col-sm-7">
+								<div datetimepicker
+								     datetimepicker-options="{inline:true,sideBySide:true}">
+								</div>
+							</div>
+						</div>
+					</form>
+
+					<br />
+					<br />
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+		<script type="text/javascript" src="bower_components/moment/locale/ru.js"></script>
+		<script type="text/javascript" src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+		<script type="text/javascript" src="angular-bootstrap-datetimepicker-directive.js"></script>
+
+		<script type="text/javascript">
+			'use strict';
+
+			angular
+					.module('app', [
+						'datetimepicker'
+					])
+					.config([
+						'datetimepickerProvider',
+						function (datetimepickerProvider) {
+							datetimepickerProvider.setOptions({
+								locale: 'en'
+							});
+						}
+					])
+					.run([
+						'$rootScope',
+						function ($rootScope) {
+							$rootScope.scoped = {
+								format: 'HH:mm:ss'
+							};
+						}
+					]);
+		</script>
+	</body>
+</html> 
