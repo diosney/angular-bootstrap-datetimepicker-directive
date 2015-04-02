@@ -45,6 +45,14 @@ angular
                 });
               }
             })
+            .on('dp.show', function (e) {
+                            var that = this;
+                            if (ngModelCtrl) {
+                                $timeout(function() {
+                                    $(that).data("DateTimePicker").date(e.target.value);
+                                });
+                            }
+                        })
             .datetimepicker(options);
         }
       };
