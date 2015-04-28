@@ -38,14 +38,34 @@ angular
           var options = jQuery.extend({}, default_options, passed_in_options);
 
           $element
-            .on('dp.change', function (on_change_event) {
+            .on('dp.change', function (e) {
               if (ngModelCtrl) {
                 $timeout(function () {
-                  ngModelCtrl.$setViewValue(on_change_event.target.value);
+                  ngModelCtrl.$setViewValue(e.target.value);
                 });
               }
             })
             .datetimepicker(options);
+
+          function setPickerValue() {
+            var date = null;
+
+            if (ngModelCtrl && ngModelCtrl.$viewValue) {
+              date = ngModelCtrl.$viewValue;
+            }
+
+            $element
+              .data('DateTimePicker')
+              .date(date);
+          }
+
+          if (ngModelCtrl) {
+            ngModelCtrl.$render = function () {
+              setPickerValue();
+            };
+          }
+
+          setPickerValue();
         }
       };
     }

@@ -25,7 +25,7 @@
 
 					<form class="form form-horizontal" novalidate>
 						<div class="form-group">
-							<label for="dt1" class="col-sm-3 control-label">Minimum Setup</label>
+							<label for="dt1" class="col-sm-3 control-label">Minimum Setup (with ngModel)</label>
 
 							<div class="col-sm-7">
 								<div class="input-group">
@@ -36,6 +36,7 @@
 									<input type="text" id="dt1" class="form-control input-sm"
 
 									       datetimepicker
+									       ng-model="vm.datetime"
 
 									       placeholder="..."
 									       name="time">
@@ -252,6 +253,10 @@
 							$rootScope.scoped = {
 								format: 'HH:mm:ss'
 							};
+
+							$rootScope.vm = {
+								datetime: '05/13/2011 6:30 AM'
+							}
 						}
 					]);
 		</script>
