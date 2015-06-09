@@ -26,7 +26,7 @@ A minified variant is provided for production named `angular-bootstrap-datetimep
 5- You can start using the directive in your HTML in several ways like:
 
 a) Passing in a JSON object with the options
-
+```html
 	<input type="text" class="form-control input-sm"
 
 	       datetimepicker
@@ -35,9 +35,10 @@ a) Passing in a JSON object with the options
 	       placeholder="..."
 	       name="time"
 	       ng-model="ctrl.time">
-
+```
 b) Passing in an angular scoped variable that holds the options
 
+```html
 	<input type="text" class="form-control input-sm"
 
 	       datetimepicker
@@ -46,10 +47,11 @@ b) Passing in an angular scoped variable that holds the options
 	       placeholder="..."
 	       name="time"
 	       ng-model="ctrl.time">
-
+```
 c) Set the default options with the provider and use the datepicker with those
 default options.
 
+```html
 	<input type="text" class="form-control input-sm"
 
 	       datetimepicker
@@ -74,6 +76,7 @@ default options.
 					}
 				]);
 	</script>
+```
 
 All options are named identically with the same letter case.
 
