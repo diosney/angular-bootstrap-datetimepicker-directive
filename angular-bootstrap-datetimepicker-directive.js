@@ -48,7 +48,7 @@ angular
             .datetimepicker(options);
 
           function setPickerValue() {
-            var date = null;
+            var date = options.defaultDate || null;
 
             if (ngModelCtrl && ngModelCtrl.$viewValue) {
               date = ngModelCtrl.$viewValue;
