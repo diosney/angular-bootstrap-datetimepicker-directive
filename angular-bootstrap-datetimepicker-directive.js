@@ -41,7 +41,11 @@ angular
             .on('dp.change', function (e) {
               if (ngModelCtrl) {
                 $timeout(function () {
-                  ngModelCtrl.$setViewValue(e.target.value);
+                  if (options.inline) {
+                    ngModelCtrl.$setViewValue($(e.target).find('input').val());
+                  } else {
+                    ngModelCtrl.$setViewValue(e.target.value);
+                  }
                 });
               }
             })
