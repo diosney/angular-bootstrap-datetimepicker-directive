@@ -37,7 +37,9 @@ angular
           var passed_in_options = $scope.$eval($attrs.datetimepickerOptions);
           var options = jQuery.extend({}, default_options, passed_in_options);
 
-          $element
+          var datePickerElement = $element.parent().hasClass('input-group') ? $element.parent() : $element;
+
+          datePickerElement
             .on('dp.change', function (e) {
               if (ngModelCtrl) {
                 $timeout(function () {
@@ -54,7 +56,7 @@ angular
               date = ngModelCtrl.$viewValue;
             }
 
-            $element
+            datePickerElement
               .data('DateTimePicker')
               .date(date);
           }
