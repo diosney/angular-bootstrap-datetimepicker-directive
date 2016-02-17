@@ -37,6 +37,10 @@ angular
           var passed_in_options = $scope.$eval($attrs.datetimepickerOptions);
           var options = jQuery.extend({}, default_options, passed_in_options);
 
+          if ($element.parent().hasClass('input-group')) {
+            $element = $element.parent()
+          }
+
           $element
             .on('dp.change', function (e) {
               if (ngModelCtrl) {
