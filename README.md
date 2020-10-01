@@ -1,6 +1,6 @@
 # angular-bootstrap-datetimepicker-directive
 
-A wrapper directive around the [bootstrap-datetimepicker component](http://eonasdan.github.io/bootstrap-datetimepicker/).
+Updated A wrapper directive around the [bootstrap-datetimepicker component](http://eonasdan.github.io/bootstrap-datetimepicker/).
 
 ## How to Use
 
